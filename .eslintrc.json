@@ -1,0 +1,73 @@
+{
+  "plugins": [
+    "simple-import-sort",
+    "unused-imports",
+    "prettier"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "import/no-anonymous-default-export": "off",
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    // "unused-imports/no-unused-vars": []
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          [
+            "^react",
+            "^@react"
+          ],
+          [
+            "^next",
+            "^@next"
+          ],
+          [
+            "^redux",
+            "^react-redux"
+          ],
+          [
+            "^ant",
+            "^@ant"
+          ],
+          [
+            "^@?\\w"
+            // "@/(.*)"
+          ],
+          [
+            "^@api/",
+            "^@redux/"
+          ],
+          [
+            "^@hook/"
+          ],
+          [
+            "^@template/",
+            "^@pages/",
+            "^@layout/",
+            "^@component/"
+          ],
+          [
+            "^@constant/",
+            "^@type/"
+          ],
+          [
+            "^@util/"
+          ],
+          [
+            "^[./]"
+          ]
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
